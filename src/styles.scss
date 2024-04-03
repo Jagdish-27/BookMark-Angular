@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+// ## Colors
+
+// ### Primary
+
+$color_Soft_Blue: hsl(231, 69%, 60%);
+$color_Soft_Red: hsl(0, 94%, 66%);
+
+// ### Neutral
+
+$color_Grayish_Blue: hsl(229, 8%, 60%);
+$color_Very_Dark_Blue: hsl(229, 31%, 21%);
+$color_white:#fff;
+
+$box_shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+$font_size_regular:16px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.btn-clear{
+    height: unset;
+    width: unset;
+    border: unset;
+    outline: unset;
+    color: unset;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+$workSpace-Desktop:1440px;
+
+.workspace{
+    width: 100%;
+    max-width: $workSpace-Desktop;
+
+    margin: 0 auto;
+
+    @media(max-width:$workSpace-Desktop){
+        padding: 0 20px;
+    }
+}
+
+.ng-invalid.ng-touched input{
+    border: 2px solid $color_Soft_Red!important;
+}
+
+@mixin border_none{
+    border: none;
+    outline: none;
+}
+
+@mixin display_flex{
+    display: flex;
+    align-items: center;
+}
+
+

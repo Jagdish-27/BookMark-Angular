@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+
+.btn{
+    @include border_none;
+    box-shadow: $box_shadow;
+    font-size: $font_size_regular;
+    border-radius: 6px;
+    padding: 0.8rem 1.3rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.hover_blue:hover{
+    border: 2px solid $color_Soft_Blue!important;
+    background-color: $color_white!important;
+    color: $color_Soft_Blue !important;
+    transition: all 0.5s !important;
+}
+
+.hover_black:hover{
+    border: 2px solid $color_Very_Dark_Blue!important;
+    background-color: $color_white!important;
+    color: $color_Very_Dark_Blue !important;
+    transition: all 0.5s !important;
+}

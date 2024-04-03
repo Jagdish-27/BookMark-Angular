@@ -1,0 +1,16 @@
+<section class="section workspace">
+    <div class="box">
+        <h4>Download the extension</h4>
+        <div class="text">
+            <p>We've got more browsers in the pipeline. Please do let us know if</p>
+            <p>you've got a favourite you would like us to prioritize</p>
+        </div>
+    </div>
+    <!-- transform: translate(0, 10%); -->
+
+    <div class="add_cards">
+        <app-card  class="card" [add_text]="'Add to Chrome'" [img]="'assets/images/logo-chrome.svg'" [version_text]="'Minimum version 62'"></app-card>
+    <app-card style="transform: translateY(10%);" class="card" [add_text]="'Add to Firefor'" [img]="'assets/images/logo-firefox.svg'" [version_text]="'Minimum version 55'"></app-card>
+    <app-card style="transform: translateY(20%);" class="card" [add_text]="'Add to Opera'" [img]="'assets/images/logo-opera.svg'" [version_text]="'Minimum version 46'"></app-card>
+    </div>
+</section>

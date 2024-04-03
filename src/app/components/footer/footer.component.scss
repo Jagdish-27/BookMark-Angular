@@ -1,0 +1,100 @@
+@import "../../../styles.scss";
+
+.footer {
+  background-color: $color_Soft_Blue;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    gap: 2rem;
+    color: #fff;
+    font-weight: 500;
+
+    p {
+      letter-spacing: 4px;
+      font-size: 12px;
+
+      @media(max-width:405px){
+        text-align: center;
+      }
+    }
+
+    .text {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+
+      @media(max-width:1150px){
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      @media(max-width:692px){
+        font-size: 15px;
+      width: 100%;
+      }
+    }
+
+    .contact_box {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      @media(max-width:1150px){
+        flex-direction: column;
+        width: auto;
+      }
+      .input_box{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .span{
+            background-color: $color_Soft_Red;
+            color: $color_white;
+            font-style: italic;
+            padding: 0.4rem 0.5rem;
+            font-size: 12px;
+            border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        width: 100%;
+        }
+      }
+      input {
+        padding: 1rem;
+        width: 320px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        @include border_none;
+      }
+      input::placeholder {
+        color: grey;
+      }
+      .btn {
+        cursor: pointer;
+        height: 3rem;
+        padding: 1rem 1.4rem;
+        border-radius: 6px;
+        background-color: $color_Soft_Red;
+        outline: none;
+        border: none;
+        @include border_none;
+        color: #fff;
+        border: 2px solid transparent;
+      }
+      .btn:hover{
+        border: 2px solid $color_Soft_Red;
+        background-color: $color_white;
+        color: $color_Soft_Red;
+        transition: all 0.5s;
+      }
+    }
+  }
+}

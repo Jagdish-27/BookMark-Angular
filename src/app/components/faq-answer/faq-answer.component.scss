@@ -1,0 +1,20 @@
+@import '../../../styles.scss';
+.open{
+    height: auto;
+    padding: 1.2rem 0;
+    color: hsl(229deg 2.67% 23.22%);
+    line-height: 1.8rem;
+    font-size: 17px;
+    transition: all 0.3s;
+
+    @media(max-width: 590px){
+        font-size: 16px;
+    }
+}
+
+.close{
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}

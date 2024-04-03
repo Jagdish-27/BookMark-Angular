@@ -1,0 +1,113 @@
+@import '../../../styles.scss';
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 20px;
+
+    transition: all 0.5s;
+    .nav{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        padding-right: 5rem;
+
+
+        @media(max-width:1150px){
+            display: none;
+            padding-right: 0;
+        }
+
+        .list_items{
+            list-style: none;
+            cursor: pointer;
+        }
+        .list_items:hover{
+            color: $color_Soft_Red;
+        }
+
+        .login{
+            background-color: $color_Soft_Red;
+            color: #fff;
+            padding: 0.7rem 2.3rem;
+            border-radius: 8px;
+            border: 2px solid transparent;
+        }
+        .login:hover{
+            background-color: $color_white;
+            border: 2px solid $color_Soft_Red;
+            transition: all 0.5s ;
+        }
+    }
+
+    .hamburger{
+        display: none;
+
+        @media(max-width:1150px){
+            display: flex;
+        }
+    }
+}
+
+.active_nav{
+    background: $color_Very_Dark_Blue;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    .logo{
+        width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+    // border-bottom: 1px solid $color_white;
+    }
+}
+.active_nav_items{
+
+        @include display_flex;
+        flex-direction: column;
+        justify-content: center;
+        // gap: 2rem;
+        list-style: none;
+        color: #fff;
+        width: 100%;
+        // padding: 1.8rem;
+        .list_items{
+            border-top: 1px solid #6a6666;
+            letter-spacing: 2px;
+            width: 100%;
+            @include display_flex;
+            justify-content: center;
+            padding: 1.3em 0;
+            font-size: 1.1rem;
+            color: #e5d3d3;
+            // font-weight: 500;
+        }
+        .login_style{
+            border: 2px solid #fff;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 10rem;
+}
+.hide{
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: all 0.5s;
+}
+
+.show{
+    transition: all 0.5s;
+    height: 100vh;
+}

@@ -1,0 +1,14 @@
+<section class="section workspace">
+    <h4>Frequently Asked Questions</h4>
+    <div class="text">
+        <p>Here are some of our FAQs. If you have any other questions</p>
+        <p>you'd like answered please feel free to email us.</p>
+    </div>
+
+    <div class="questions">
+    @for (faq of faqs; track $index) {
+        <app-faq-question [isOpen_s]="openQuestion.includes(faq.id)" (onToggleView)="toggleQues($event)"
+        [faq]="faq" ></app-faq-question>
+    }
+</div>
+</section>

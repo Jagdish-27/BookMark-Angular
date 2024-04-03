@@ -1,0 +1,62 @@
+
+@import '../../../styles.scss';
+
+.footer{
+    height: 100px;
+    background-color: $color_Very_Dark_Blue;
+    @include display_flex;
+    justify-content: space-between;
+
+    @media(max-width:1150px){
+        height: auto;
+        flex-direction: column;
+    gap: 2rem;
+    }
+
+    .left_items{
+        @include display_flex;
+        list-style: none;
+        color: #fff;
+        gap: 4rem;
+    font-size: 14px;
+    padding-left: 3rem;
+
+    @media(max-width:1150px){
+        padding-top: 2.5rem;
+        padding-left: 0;
+        flex-direction: column;
+    gap: 2rem;
+    
+    }
+
+    .list_items:hover{
+        color: $color_Soft_Red;
+        cursor: pointer
+    }
+    }
+    .right_logo{
+        @include display_flex;
+        gap: 2.5rem;
+
+    @media(max-width:1150px){
+    justify-content: center;
+    }        
+
+        button{
+            padding: 0.4rem;
+            border: 1px solid transparent;
+            border-radius: 7px;
+        }
+        button:hover{
+            border: 1px solid $color_Soft_Red;
+            
+        }
+    }
+    .right_logo:last-child{
+        padding-right: 3rem;
+
+        @media(max-width: 1150px){
+            padding-right: 0;
+        }
+    }
+}

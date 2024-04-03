@@ -1,0 +1,42 @@
+
+@import '../../../styles.scss';
+
+.container{
+    border-bottom: 1px solid $color_Grayish_Blue;
+    width: 33rem;
+    @media(max-width:590px){
+        width: auto;
+    }
+    .faq_row{
+        @include display_flex;
+        justify-content: space-between;
+        // width: 33rem;
+        width: 100%;
+        padding: 1.5rem 0;
+    
+        h4{
+            font-size: 1.1rem;
+        font-weight: 400;
+
+            @media(max-width:590px){
+                font-size: 1rem;
+            }
+        }
+
+        .style{
+            color: $color_Soft_Red;
+        }
+
+        .transition{
+            transition: all 0.3s;
+        }
+        .rotate{
+            transform: rotate(180deg);
+            transition: all 0.3s;
+        }
+    }
+    .first{
+        border-top: 1px solid $color_Grayish_Blue;
+    }
+}
+

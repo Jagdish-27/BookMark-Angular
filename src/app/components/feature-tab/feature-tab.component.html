@@ -1,0 +1,16 @@
+<section class="section workspace">
+    <h4>Features</h4>
+    <div class="text">
+        <p>Our aim is to make it quick and easy for you to access your</p>
+        <p>favourite websites. Your bookmarks sync between your devices</p>
+        <p>so you can access them on the go</p>
+    </div>
+    <nav class="nav">
+        @for (item of tabList; track $index) {
+            <li [class.easy]="item === 'Easy Sharing'" (click)="tabClick(item)" class="list_item">{{item}}</li>
+        }
+    </nav>
+    <div #lineElement  class="active_line"></div>
+    <div class="line"></div>
+</section>
+<app-dynamic-change [currentTab]="activeTab"></app-dynamic-change>

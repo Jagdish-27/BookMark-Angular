@@ -1,0 +1,29 @@
+<header [class.hide]="sideNavOpen" class="header workspace">
+    <div class="logo">
+        <img src="assets\images\logo-bookmark.svg" alt="bookmark">
+    </div>
+    <nav class="nav">
+        @for (item of navItems; track $index) {
+            <li [ngClass]="{login: item==='LOGIN'}" class="list_items">{{item}}</li>
+        }
+    </nav>
+    <img (click)="openSideNav()" class="hamburger" src="assets\images\icon-hamburger.svg" alt="hamburger">
+
+</header>
+<div [class.show]="sideNavOpen" class="active_nav workspace">
+    <div class="logo">
+        <img src="assets\images\logo-bookmark light white.svg" alt="bookmark">
+        <button (click)="closeSideNav()" class="btn-clear"><img src="assets\images\icon-close.svg" alt="closeIcon"></button>
+    </div>
+    <div class="active_nav_items">
+        @for (item of navItems; track $index) {
+            <li [ngClass]="{login_style: item==='LOGIN'}" class="list_items">{{item}}</li>
+        }
+       
+    </div>
+
+    <div class="social">
+        <img src="assets\images\icon-facebook.svg" alt="facebook">
+        <img src="assets\images\icon-twitter.svg" alt="twitter">
+    </div>
+</div>

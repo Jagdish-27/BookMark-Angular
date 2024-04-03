@@ -1,0 +1,97 @@
+
+@import '../../../styles.scss';
+.section{
+    @include display_flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 5rem;
+    position: relative;
+    h4{
+        font-size: 2rem;
+    }
+
+    .text{
+    @include display_flex;
+    flex-direction: column;
+    color: $color_Grayish_Blue;
+    gap: 0.4rem;
+    font-size: 17px;
+    font-weight: 500;
+
+        @media(max-width:520px){
+            text-align: center;
+        }
+    }
+
+    .nav{
+        @include display_flex;
+    list-style: none;
+    gap: 5rem;
+    font-size: 17px;
+    cursor: pointer;
+
+        @media(max-width:1150px){
+            flex-direction: column;
+            gap: 1.1rem;
+            width: 100%;
+            align-items: center;
+        }
+    }
+
+    .active_line{
+        width: 18%;
+    background: $color_Soft_Red;
+    height: 3px;
+
+    position: absolute;
+    bottom: 0;
+    top: 304px;
+    border-radius: 2px;
+    left: 25%;
+ 
+    @media(max-width:1150px){
+        width: 16%;
+        top: 306px;
+        left: 42%;
+    }
+
+    @media(max-width:516px){
+        top: 326px;
+    }
+    }
+    .line{
+        width: 50%;
+    background: $color_Grayish_Blue;
+    height: 1px;
+    margin-bottom: 1.5rem;
+
+        @media(max-width:1150px){
+            display: none;
+        }
+    }
+}
+
+.list_item{
+    @media(max-width:1150px){
+        border-top: 1px solid $color_Grayish_Blue;
+    width: 100%;
+    @include display_flex;
+    justify-content: center;
+    padding-top: 1rem
+    }
+}
+
+.list_item:hover{
+    color: $color_Soft_Red;
+}
+.active{
+    color: $color_Soft_Red;
+}
+
+.easy{
+    @media(max-width:1150px){
+        border-bottom: 1px solid $color_Grayish_Blue;
+    padding-bottom: 1rem;
+    }
+}

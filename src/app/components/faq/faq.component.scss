@@ -1,0 +1,30 @@
+@import '../../../styles.scss';
+
+.section{
+    @include display_flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 8rem 20px;
+    h4{
+        font-size: 1.7rem;
+
+        @media(max-width:408px){
+            text-align: center;
+        }
+    }
+
+    .text{
+       @include display_flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $color_Grayish_Blue;
+    gap: 0.4rem;
+    font-size: 1.1rem;
+    padding-bottom: 2.1rem;
+        
+    @media(max-width:510px){
+        text-align: center;
+     }
+    }
+}

@@ -1,0 +1,21 @@
+<footer class="footer workspace">
+    <form [formGroup]="email_form">
+        <div class="content">
+            <p>35,000+ ALREADY JOINED</p>
+            <div class="text">
+                <h2>Stay up-to-date with what</h2>
+            <h2>we're doing</h2>
+            </div>
+            <div class="contact_box">
+                <div class="input_box">
+                    <input formControlName="email" placeholder="Enter your email address" type="email">
+                    @if (email_form.get('email')?.hasError('required') && email_form.get('email')?.touched || email_form.get('email')?.invalid)  {
+                        <span class="span">Whoops! make sure it's an email</span>
+                    }
+                </div>
+                <button class="btn">Contact Us</button>
+            </div>
+        </div>
+    </form>
+</footer>
+<app-bottom-footer></app-bottom-footer>

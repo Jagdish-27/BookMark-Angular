@@ -1,0 +1,40 @@
+<section class="section workspace">
+<div class="left">
+    @if (currentTab === 'Simple Bookmarking') {
+        <img src="assets\images\illustration-features-tab-1.svg" alt="bookmark">
+    }@else if (currentTab === 'Speedy Searching') {
+        <img src="assets\images\illustration-features-tab-2.svg" alt="bookmark">
+    }@else if (currentTab === 'Easy Sharing') {
+        <img src="assets\images\illustration-features-tab-3.svg" alt="bookmark">
+    }
+    <div class="background_box">
+    </div>
+</div>
+<div class="right">
+    @if (currentTab === 'Simple Bookmarking') {
+        <h4>Bookmark in one click</h4>
+        <div class="text">
+        <p>Organize your bookmarks however you like. Our</p>
+        <p>simple drag-and-drop interface gives you complete</p>
+        <p>control over how you manage your favourite sites.</p>
+        </div>
+        <button class="btn">More Info</button>
+    }@else if (currentTab === 'Speedy Searching') {
+        <h4>Intelligent search</h4>
+        <div class="text">
+        <p>Our powerful search feature will help you find saved</p>
+        <p>sites in no time at all</p>
+        <p>your bookmarks.</p>
+        </div>
+        <button class="btn">More Info</button>
+    }@else if (currentTab === 'Easy Sharing') {
+        <h4>Share your bookmarks</h4>
+        <div class="text">
+        <p>Easily share your bookmarks and collection with</p>
+        <p>others. Create a shareable link that you can send at</p>
+        <p>the click of a button.</p>
+        </div>
+        <button class="btn">More Info</button>
+    }
+</div>
+</section>

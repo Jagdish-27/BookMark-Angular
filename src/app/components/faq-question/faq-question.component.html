@@ -1,0 +1,10 @@
+
+<div class="container" (click)="onArrowClick()">
+    <div class="faq_row" [class.first]="faq.id === 1" (click)="onToggleView.emit(faq.id)">
+        <h4 [class.style]="!isOpen">{{faq.question}}</h4>
+        <button  class="btn-clear">
+            <img class="transition" [ngClass]="{rotate: isOpen}" [src]="isOpen ? 'assets/images/icon-arrow red.svg':'assets/images/icon-arrow.svg'" alt="downArrow">
+        </button>
+    </div>
+    <app-faq-answer [answer]="faq.ans" [isOpen]="isOpen"></app-faq-answer>
+</div>
